@@ -12,7 +12,7 @@ class Search:
         """
         This function searches an array using binary search, assuming the array is sorted
         """
-        
+
         if ceiling >= floor:
 
             mid = (ceiling + floor) // 2
@@ -20,11 +20,9 @@ class Search:
             if arr[mid] == target:
                 return mid
 
-            elif arr[mid] > target:
+            if arr[mid] > target:
                 return self.binary_search(arr, floor, mid - 1, target)
 
-            else:
-                return self.binary_search(arr, mid + 1, ceiling, target)
+            return self.binary_search(arr, mid + 1, ceiling, target)
 
-        else:
-            return False
+        return False
