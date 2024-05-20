@@ -21,10 +21,10 @@ class Search:
                 return mid
 
             elif arr[mid] > target:
-                return binary_search(arr, floor, mid - 1, target)
+                return self.binary_search(arr, floor, mid - 1, target)
 
             else:
-                return binary_search(arr, mid + 1, ceiling, target)
+                return self.binary_search(arr, mid + 1, ceiling, target)
 
         else:
             return False
