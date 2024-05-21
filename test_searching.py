@@ -11,6 +11,17 @@ class TestSearching(Search, unittest.TestCase):
     This class contains unit tests for the searching algorithms
     """
 
+    def test_linear_search(self):
+        """
+        This function tests the linear search algorithm
+        """
+
+        arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        target = 6
+        result = self.linear_search(arr, target)
+        expected_result = 5
+        self.assertEqual(result, expected_result)
+
     def test_binary_search(self):
         """
         This function tests the binary search algorithm
