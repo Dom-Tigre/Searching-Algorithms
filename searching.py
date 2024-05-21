@@ -8,6 +8,17 @@ class Search:
     This class currently contains binary search
     """
 
+    def linear_search(self, arr, target):
+        """
+        This function searches an array using linear search
+        """
+
+        for i in range(len(arr)):
+            if arr[i] == target:
+                return i
+
+        return False
+
     def binary_search(self, arr, floor, ceiling, target):
         """
         This function searches an array using binary search, assuming the array is sorted
